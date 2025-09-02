@@ -5,11 +5,11 @@
     <div>
         <!-- Single Page Header start -->
         <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-white display-6 wow fadeInUp" data-wow-delay="0.1s">Single Product</h1>
+            <h1 class="text-center text-white display-6 wow fadeInUp" data-wow-delay="0.1s">Product Details</h1>
             <ol class="breadcrumb justify-content-center mb-0 wow fadeInUp" data-wow-delay="0.3s">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-white">Single Product</li>
+                <li class="breadcrumb-item active text-white">Product Details</li>
             </ol>
         </div>
         <!-- Single Page Header End -->
@@ -87,7 +87,8 @@
                             <h4 class="mb-3">Featured products</h4>
                             <div class="featured-product-item">
                                 <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                    <img src={{asset("assets/img/product-3.png")}} class="img-fluid rounded" alt="Image">
+                                    <img src={{ asset('assets/img/product-3.png') }} class="img-fluid rounded"
+                                        alt="Image">
                                 </div>
                                 <div>
                                     <h6 class="mb-2">SmartPhone</h6>
@@ -106,7 +107,8 @@
                             </div>
                             <div class="featured-product-item">
                                 <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                    <img src={{asset("assets/img/product-4.png")}} class="img-fluid rounded" alt="Image">
+                                    <img src={{ asset('assets/img/product-4.png') }} class="img-fluid rounded"
+                                        alt="Image">
                                 </div>
                                 <div>
                                     <h6 class="mb-2">Smart Camera</h6>
@@ -125,7 +127,8 @@
                             </div>
                             <div class="featured-product-item">
                                 <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                    <img src={{asset("assets/img/product-5.png")}} class="img-fluid rounded" alt="Image">
+                                    <img src={{ asset('assets/img/product-5.png') }} class="img-fluid rounded"
+                                        alt="Image">
                                 </div>
                                 <div>
                                     <h6 class="mb-2">Smart Camera</h6>
@@ -144,7 +147,8 @@
                             </div>
                             <div class="featured-product-item">
                                 <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                    <img src={{asset("assets/img/product-6.png")}} class="img-fluid rounded" alt="Image">
+                                    <img src={{ asset('assets/img/product-6.png') }} class="img-fluid rounded"
+                                        alt="Image">
                                 </div>
                                 <div>
                                     <h6 class="mb-2">Smart Camera</h6>
@@ -163,7 +167,8 @@
                             </div>
                             <div class="featured-product-item">
                                 <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                    <img src={{asset("assets/img/product-7.png")}} class="img-fluid rounded" alt="Image">
+                                    <img src={{ asset('assets/img/product-7.png') }} class="img-fluid rounded"
+                                        alt="Image">
                                 </div>
                                 <div>
                                     <h6 class="mb-2">Camera Leance</h6>
@@ -182,7 +187,8 @@
                             </div>
                             <div class="featured-product-item">
                                 <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                    <img src={{asset("assets/img/product-8.png")}} class="img-fluid rounded" alt="Image">
+                                    <img src={{ asset('assets/img/product-8.png') }} class="img-fluid rounded"
+                                        alt="Image">
                                 </div>
                                 <div>
                                     <h6 class="mb-2">Smart Camera</h6>
@@ -205,7 +211,8 @@
                         </div>
                         <a href="#">
                             <div class="position-relative">
-                                <img src={{asset("assets/img/product-banner-2.jpg)}}" class="img-fluid w-100 rounded" alt="Image">
+                                <img src={{ asset('assets/img/product-banner-2.jpg') }} class="img-fluid w-100 rounded"
+                                    alt="Image">
                                 <div class="text-center position-absolute d-flex flex-column align-items-center justify-content-center rounded p-4"
                                     style="width: 100%; height: 100%; top: 0; right: 0; background: rgba(242, 139, 0, 0.3);">
                                     <h5 class="display-6 text-primary">SALE</h5>
@@ -237,39 +244,16 @@
                                     <div class="single-item"
                                         data-dot="<img class='img-fluid' src='img/product-4.png' alt=''>">
                                         <div class="single-inner bg-light rounded">
-                                            <img src={{asset("assets/img/product-4.png")}} class="img-fluid rounded" alt="Image">
-                                        </div>
-                                    </div>
-                                    <div class="single-item"
-                                        data-dot="<img class='img-fluid' src='img/product-5.png' alt=''>">
-                                        <div class="single-inner bg-light rounded">
-                                            <img src={{asset("assets/img/product-5.png")}} class="img-fluid rounded" alt="Image">
-                                        </div>
-                                    </div>
-                                    <div class="single-item"
-                                        data-dot="<img class='img-fluid' src='img/product-6.png' alt=''>">
-                                        <div class="single-inner bg-light rounded">
-                                            <img src={{asset("assets/img/product-6.png")}} class="img-fluid rounded" alt="Image">
-                                        </div>
-                                    </div>
-                                    <div class="single-item"
-                                        data-dot="<img class='img-fluid' src='img/product-7.png' alt=''>">
-                                        <div class="single-inner bg-light rounded">
-                                            <img src={{asset("assets/img/product-7.png")}} class="img-fluid rounded" alt="Image">
-                                        </div>
-                                    </div>
-                                    <div class="single-item"
-                                        data-dot="<img class='img-fluid' src='img/product-3.png' alt=''>">
-                                        <div class="single-inner bg-light rounded">
-                                            <img src={{asset("assets/img/product-3.png")}} class="img-fluid rounded" alt="Image">
+                                            <img src={{ $productDetails['image'] }} class="img-fluid rounded"
+                                                alt="Image">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
-                                <h4 class="fw-bold mb-3">Smart Camera</h4>
+                                <h4 class="fw-bold mb-3">{{ $productDetails['name'] }}</h4>
                                 <p class="mb-3">Category: Electronics</p>
-                                <h5 class="fw-bold mb-3">3,35 $</h5>
+                                <h5 class="fw-bold mb-3">{{ $productDetails['price'] }}$</h5>
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star text-secondary"></i>
@@ -277,20 +261,6 @@
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <div class="mb-3">
-                                    <div class="btn btn-primary d-inline-block rounded text-white py-1 px-4 me-2"><i
-                                            class="fab fa-facebook-f me-1"></i> Share</div>
-                                    <div class="btn btn-secondary d-inline-block rounded text-white py-1 px-4 ms-2"><i
-                                            class="fab fa-twitter ms-1"></i> Share</div>
-                                </div>
-                                <div class="d-flex flex-column mb-3">
-                                    <small>Product SKU: N/A</small>
-                                    <small>Available: <strong class="text-primary">20 items in stock</strong></small>
-                                </div>
-                                <p class="mb-4">The generated Lorem Ipsum is therefore always free from repetition
-                                    injected humour, or non-characteristic words etc.</p>
-                                <p class="mb-4">Susp endisse ultricies nisi vel quam suscipit. Sabertooth peacock
-                                    flounder; chain pickerel hatchetfish, pencilfish snailfish</p>
                                 <div class="input-group quantity mb-5" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-minus rounded-circle bg-light border">
@@ -325,37 +295,14 @@
                                 <div class="tab-content mb-5">
                                     <div class="tab-pane active" id="nav-about" role="tabpanel"
                                         aria-labelledby="nav-about-tab">
-                                        <p>Our new <b class="fw-bold">HPB12 / A12 battery</b> is rated at 2000mAh and
-                                            designed to power up Black and Decker / FireStorm line of 12V tools allowing
-                                            users to run multiple devices off the same battery pack. The HPB12 is compatible
-                                            with the following Black and Decker power tool models:
-                                        </p>
-                                        <b class="fw-bold">Black & Decker Drills and Drivers:</b>
-                                        <p class="small">BD12PSK, BDG1200K, BDGL12K, BDID1202, CD1200SK, CD12SFK,
-                                            CDC1200K, CDC120AK, CDC120ASB, CP122K, CP122KB, CP12K, CP12KB, EPC12, EPC126,
-                                            EPC126BK, EPC12CA, EPC12CABK, HP122K, HP122KD, HP126F2B, HP126F2K, HP126F3B,
-                                            HP126F3K, HP126FBH, HP126FSC, HP126FSH, HP126K, HP128F3B, HP12K, HP12KD,
-                                            HPD1200, HPD1202, HPD1202KF, HPD12K-2, PS122K, PS122KB, PS12HAK, SS12, SX3000,
-                                            SX3500, XD1200, XD1200K, XTC121
-                                        </p>
-                                        <b class="fw-bold">lack & Decker Impact Wrenches:</b>
-                                        <p class="small">SX5000, XTC12IK, XTC12IKH</p>
-                                        <b class="fw-bold">Black & Decker Multi-Tools:</b>
-                                        <p class="small">KC2000FK</p>
-                                        <b class="fw-bold">Black & Decker Nailers:</b>
-                                        <p class="small">BDBN1202</p>
-                                        <b class="fw-bold">Black & Decker Screwdrivers:</b>
-                                        <p class="small">HP9019K</p>
-                                        <b class="fw-bold mb-0">Best replacement for the following Black and Decker OEM
-                                            battery part numbers:</b>
-                                        <p class="small">HPB12, A12, A12EX, A12-XJ, A1712, B-8315, BD1204L, BD-1204L,
-                                            BPT1047, FS120B, FS120BX, FSB12.</p>
+                                        <p>{{$productDetails['description']}}</p>
                                     </div>
                                     <div class="tab-pane" id="nav-mission" role="tabpanel"
                                         aria-labelledby="nav-mission-tab">
                                         <div class="d-flex">
-                                            <img src={{asset("assets/img/avatar.jpg" class)}}="img-fluid rounded-circle p-3"
-                                                style="width: 100px; height: 100px;" alt="">
+                                            <img src={{ asset('assets/img/avatar.jpg') }}
+                                                class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;"
+                                                alt="">
                                             <div class="">
                                                 <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
                                                 <div class="d-flex justify-content-between">
@@ -374,8 +321,9 @@
                                             </div>
                                         </div>
                                         <div class="d-flex">
-                                            <img src={{asset("assets/img/avatar.jpg" class)}}="img-fluid rounded-circle p-3"
-                                                style="width: 100px; height: 100px;" alt="">
+                                            <img src={{ asset('assets/img/avatar.jpg') }}
+                                                class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;"
+                                                alt="">
                                             <div class="">
                                                 <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
                                                 <div class="d-flex justify-content-between">
@@ -464,7 +412,8 @@
                     <div class="related-item rounded">
                         <div class="related-item-inner border rounded">
                             <div class="related-item-inner-item">
-                                <img src={{asset("assets/img/product-3.png")}} class="img-fluid w-100 rounded-top" alt="">
+                                <img src={{ asset('assets/img/product-3.png') }} class="img-fluid w-100 rounded-top"
+                                    alt="">
                                 <div class="related-new">New</div>
                                 <div class="related-details">
                                     <a href="#"><i class="fa fa-eye fa-1x"></i></a>
@@ -503,7 +452,8 @@
                     <div class="related-item rounded">
                         <div class="related-item-inner border rounded">
                             <div class="related-item-inner-item">
-                                <img src={{asset("assets/img/product-3.png")}} class="img-fluid w-100 rounded-top" alt="">
+                                <img src={{ asset('assets/img/product-3.png') }} class="img-fluid w-100 rounded-top"
+                                    alt="">
                                 <div class="related-new">New</div>
                                 <div class="related-details">
                                     <a href="#"><i class="fa fa-eye fa-1x"></i></a>
@@ -542,7 +492,8 @@
                     <div class="related-item rounded">
                         <div class="related-item-inner border rounded">
                             <div class="related-item-inner-item">
-                                <img src={{asset("assets/img/product-3.png")}} class="img-fluid w-100 rounded-top" alt="">
+                                <img src={{ asset('assets/img/product-3.png') }} class="img-fluid w-100 rounded-top"
+                                    alt="">
                                 <div class="related-new">New</div>
                                 <div class="related-details">
                                     <a href="#"><i class="fa fa-eye fa-1x"></i></a>
@@ -581,7 +532,8 @@
                     <div class="related-item rounded">
                         <div class="related-item-inner border rounded">
                             <div class="related-item-inner-item">
-                                <img src={{asset("assets/img/product-3.png")}} class="img-fluid w-100 rounded-top" alt="">
+                                <img src={{ asset('assets/img/product-3.png') }} class="img-fluid w-100 rounded-top"
+                                    alt="">
                                 <div class="related-new">New</div>
                                 <div class="related-details">
                                     <a href="#"><i class="fa fa-eye fa-1x"></i></a>
@@ -620,7 +572,8 @@
                     <div class="related-item rounded">
                         <div class="related-item-inner border rounded">
                             <div class="related-item-inner-item">
-                                <img src={{asset("assets/img/product-3.png")}} class="img-fluid w-100 rounded-top" alt="">
+                                <img src={{ asset('assets/img/product-3.png') }} class="img-fluid w-100 rounded-top"
+                                    alt="">
                                 <div class="related-new">New</div>
                                 <div class="related-details">
                                     <a href="#"><i class="fa fa-eye fa-1x"></i></a>
