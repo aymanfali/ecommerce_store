@@ -69,4 +69,14 @@ class StoreController extends Controller
 
         return view('shop.product-details', compact('productDetails'));
     }
+
+    public function cart()
+    {
+        return view('shop.cart');
+    }
+
+    public function contact()
+    {
+        return view('shop.contact');
+    }
 }

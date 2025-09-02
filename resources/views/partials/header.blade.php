@@ -157,16 +157,8 @@
                             {{-- <a href="/index" class="nav-item nav-link active">Home</a> --}}
                             <a href="/products" class="nav-item nav-link active">Products</a>
                             <a href="/product-details" class="nav-item nav-link">Product Details</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle"
-                                    data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0">
-                                    <a href="bestseller.html" class="dropdown-item">Bestseller</a>
-                                    <a href="/cart" class="dropdown-item">Cart Page</a>
-                                    <a href="cheackout.html" class="dropdown-item">Cheackout</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
-                            </div>
+                            <a href="/cart" class="nav-item nav-link">Cart</a>
+                            
                             <a href="/contact" class="nav-item nav-link me-2">Contact</a>
                             <a href="/about" class="nav-item nav-link me-2">About</a>
                             <div class="nav-item dropdown d-block d-lg-none mb-3">
