@@ -190,7 +190,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
                     <a href="" class="navbar-brand d-block d-lg-none">
                         <h1 class="display-5 text-secondary m-0"><i
-                                class="fas fa-shopping-bag text-white me-2"></i>Electro</h1>
+                                class="fas fa-shopping-bag text-white me-2"></i>Shoppatty</h1>
                         
                     </a>
                     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
@@ -199,20 +199,21 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
-                            <a href="single.html" class="nav-item nav-link">Single Page</a>
+                            {{-- <a href="/index" class="nav-item nav-link active">Home</a> --}}
+                            <a href="/products" class="nav-item nav-link active">Products</a>
+                            <a href="/product-details" class="nav-item nav-link">Product Details</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle"
                                     data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0">
                                     <a href="bestseller.html" class="dropdown-item">Bestseller</a>
-                                    <a href="cart.html" class="dropdown-item">Cart Page</a>
+                                    <a href="/cart" class="dropdown-item">Cart Page</a>
                                     <a href="cheackout.html" class="dropdown-item">Cheackout</a>
                                     <a href="404.html" class="dropdown-item">404 Page</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link me-2">Contact</a>
+                            <a href="/contact" class="nav-item nav-link me-2">Contact</a>
+                            <a href="/about" class="nav-item nav-link me-2">About</a>
                             <div class="nav-item dropdown d-block d-lg-none mb-3">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">All
                                     Category</a>
