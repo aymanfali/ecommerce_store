@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\StoreController;
 use Illuminate\Support\Facades\Route;
@@ -14,3 +15,7 @@ Route::get('/product-details', [StoreController::class, 'productDetails']);
 Route::get('/about', [StoreController::class, 'about']);
 Route::get('/cart', [StoreController::class, 'cart']);
 Route::get('/contact', [StoreController::class, 'contact']);
+
+
+Route::get('/dashboard/products', [ProductController::class,'index']);
+Route::get('/dashboard/products/{id}', [ProductController::class, 'show']);
