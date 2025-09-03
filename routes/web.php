@@ -12,3 +12,5 @@ Route::get('/shop', [ShopController::class,'index'])->name('index');
 Route::get('/products', [StoreController::class,'index']);
 Route::get('/product-details', [StoreController::class, 'productDetails']);
 Route::get('/about', [StoreController::class, 'about']);
+Route::get('/cart', [StoreController::class, 'cart']);
+Route::get('/contact', [StoreController::class, 'contact']);
