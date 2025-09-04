@@ -1,5 +1,9 @@
 <div>
     <h1>prodcuts list</h1>
+    <a href="{{ route('products.create') }}">Create</a>
+    @if (session('success'))
+        {{ session('success') }}
+    @endif
     <table>
         <thead>
             <th>name</th>
