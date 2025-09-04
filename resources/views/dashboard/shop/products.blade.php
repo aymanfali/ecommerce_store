@@ -20,7 +20,7 @@
                         <td>{{ $product->price }}</td>
                         <td><img src={{ $product->image }} alt={{ $product->name }} style="width:100px; height:100px;"></td>
                         <td>{{ $product->created_at }}</td>
-                        <td></td>
+                        <td><a href="{{ route('products.edit', $product->id) }}">Edit</a></td>
                     </tr>
                 @endforeach
                 @endif

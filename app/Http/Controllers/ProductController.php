@@ -24,13 +24,14 @@ class ProductController extends Controller
         return view("dashboard.shop.create-product");
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $request->validate(
             [
                 'name' => ['required', 'string', 'min:5'],
                 'price' => ['required', 'numeric'],
                 'description' => ['required', 'string', 'min:5'],
-                'image' => ['nullable', 'image', 'min:5'],
+                'image' => ['nullable', 'image'],
             ],
             [
                 'image.image' => 'image must be image',
@@ -47,5 +48,32 @@ class ProductController extends Controller
         $product->save();
 
         return redirect()->route('products.index')->with('success', 'product added successfully!');
+    }
+
+    public function edit(Product $product)
+    {
+        return view('dashboard.shop.edit-product', compact('product'));
+    }
+
+    public function update(Request $request, Product $product)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'min:5'],
+            'price' => ['required', 'numeric'],
+            'description' => ['required', 'string', 'min:5'],
+            'image' => ['nullable', 'image'],
+        ]);
+
+        $data = $request->only(['name', 'price', 'description']);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('images', 'public');
+            $data['image'] = $path;
+        }
+
+        $product->update($data);
+
+        return redirect()->route('products.index')
+            ->with('success', 'Product updated successfully!');
     }
 }
