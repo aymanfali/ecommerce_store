@@ -17,5 +17,7 @@ Route::get('/cart', [StoreController::class, 'cart']);
 Route::get('/contact', [StoreController::class, 'contact']);
 
 
-Route::get('/dashboard/products', [ProductController::class,'index']);
-Route::get('/dashboard/products/{id}', [ProductController::class, 'show']);
+Route::get('/dashboard/products', [ProductController::class,'index'])->name('products.index');
+// Route::get('/dashboard/products/{id}', [ProductController::class, 'show']);
+Route::get('/dashboard/products/create', [ProductController::class,'create']);
+Route::post('/dashboard/products', [ProductController::class,'store'])->name('product.store');
