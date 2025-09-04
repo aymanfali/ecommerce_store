@@ -26,4 +26,4 @@ Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name
 Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
 Route::delete('/dashboard/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/contact', [ContactController::class, 'send']);
