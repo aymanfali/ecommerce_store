@@ -17,9 +17,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->text('description');
             $table->float('price')->default(0);
-            $table->float('old_price')->default(0);
             $table->boolean('on_sale')->default(true);
-
+            $table->foreignId('category_id')->constrained('products')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
