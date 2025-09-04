@@ -21,6 +21,15 @@
                         <td><img src={{ $product->image }} alt={{ $product->name }} style="width:100px; height:100px;"></td>
                         <td>{{ $product->created_at }}</td>
                         <td><a href="{{ route('products.edit', $product->id) }}">Edit</a></td>
+                        <td>
+                            <form action="{{ route('products.destroy', $product->id) }}" method="POST"
+                                style="display:inline-block;"
+                                onsubmit="return confirm('Are you sure you want to delete this product?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
                 @endif
