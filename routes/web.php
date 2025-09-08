@@ -18,6 +18,20 @@ Route::get('/cart', [StoreController::class, 'cart']);
 Route::get('/contact', [StoreController::class, 'contact'])->name('contact-form');
 
 
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::get('/products', function () {
+        return view('admin.products');
+    })->name('admin.products');
+
+    Route::get('/categories', function () {
+        return view('admin.categories');
+    })->name('admin.categories');
+});
+
 Route::get('/dashboard/products', [ProductController::class, 'index'])->name('products.index');
 // Route::get('/dashboard/products/{id}', [ProductController::class, 'show']);
 Route::get('/dashboard/products/create', [ProductController::class, 'create'])->name('products.create');
