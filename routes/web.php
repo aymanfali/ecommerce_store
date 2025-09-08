@@ -17,4 +17,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::middleware(['auth', 'can:access-admin-panel'])->prefix('admin')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::get('/products', function () {
+        return view('admin.products');
+    })->name('admin.products');
+
+    Route::get('/categories', function () {
+        return view('admin.categories');
+    })->name('admin.categories');
+});
+
 require __DIR__.'/auth.php';
