@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,7 +22,15 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define('access-admin-panel', function ($user) {
-            return $user->is_admin === 1;
+            if ($user->is_admin === 1) {
+                return true;
+            }
+            Log::warning('Unauthorized admin panel access attempt', [
+                'user_id' => $user->id,
+                'email' => $user->email,
+                'timestamp' => now(),
+            ]);
+            return false;
         });
     }
 }
