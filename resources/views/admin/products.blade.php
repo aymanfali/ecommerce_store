@@ -11,15 +11,23 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Category</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($products as $product)
+            @foreach ($products as $product)
                 <tr>
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->category ? $product->category->name : 'N/A' }}</td>
+                    <td>
+                        @can('update', $product)
+                            <a href="{{ route('products.edit', $product->id) }}">
+                                <button>Edit Product</button>
+                            </a>
+                        @endcan
+                    </td>
                 </tr>
             @endforeach
         </tbody>
