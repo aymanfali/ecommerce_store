@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Resources\ProducResource;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -12,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return ProducResource::collection(Product::all());
     }
 
     /**
@@ -20,7 +22,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::create($request->all());
+        return new ProducResource($product);
     }
 
     /**
@@ -28,7 +31,8 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return new ProducResource($product);
     }
 
     /**
@@ -36,7 +40,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->update($request->all());
+        return new ProducResource($product);
     }
 
     /**
@@ -44,6 +50,8 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return response()->json(['message' => 'Product deleted']);
     }
 }
