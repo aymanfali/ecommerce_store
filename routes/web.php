@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Mail\WelcomeEmail;
+use App\Notifications\NewOrderNotification;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -29,6 +33,13 @@ Route::middleware(['auth', 'can:access-admin-panel'])->prefix('admin')->group(fu
     Route::get('/categories', function () {
         return view('admin.categories');
     })->name('admin.categories');
+});
+
+Route::get('/test-notification', function () {
+    $user = User::first(); 
+    Mail::to($user->email)->send(new WelcomeEmail());
+    $user->notify(new NewOrderNotification());
+    return 'Test email and notification sent to ' . $user->email;
 });
 
 require __DIR__.'/auth.php';
