@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\ProductNotFoundException;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,8 +19,20 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        $product = Product::find($id);
-        return view("dashboard.shop.product-details", compact("product"));
+        try {
+            $product = Product::findOrFail($id);
+
+            return view("dashboard.shop.product-details", compact("product"));
+        } catch (ProductNotFoundException $e) {
+
+            Log::error("Product not found", [
+                'product_id' => $id,
+                'error' => $e->getMessage()
+            ]);
+
+            return redirect()->route('products.index')
+                ->with('error', 'The requested product does not exist.');
+        }
     }
 
     public function create()
@@ -88,7 +101,7 @@ class ProductController extends Controller
                 'quantity' => $request->quantity,
             ]);
         }
-        
+
         return redirect()->route('products.index')
             ->with('success', 'Product updated successfully!');
     }
