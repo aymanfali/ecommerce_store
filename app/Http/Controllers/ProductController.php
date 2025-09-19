@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -74,6 +76,19 @@ class ProductController extends Controller
 
         $product->update($data);
 
+        Log::info('Admin updated a product price', [
+            'user' => Auth::user()->name,
+            'product_id' => $product->id,
+            'new_price' => $request->price
+        ]);
+
+        if ($request->quantity < 5) {
+            Log::warning('Product stock is low', [
+                'product_id' => $product->id,
+                'quantity' => $request->quantity,
+            ]);
+        }
+        
         return redirect()->route('products.index')
             ->with('success', 'Product updated successfully!');
     }
