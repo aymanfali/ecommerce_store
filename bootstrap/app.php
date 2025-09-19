@@ -21,8 +21,6 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->report(function ($e) {
             
             if ($e instanceof ProductNotFoundException) {
-                // Send email to support
-
                 Mail::raw(
                     "A ProductNotFoundException occurred:\n\nMessage: {$e->getMessage()}",
                     function ($message) {
