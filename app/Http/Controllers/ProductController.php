@@ -82,6 +82,13 @@ class ProductController extends Controller
             'new_price' => $request->price
         ]);
 
+        if ($request->quantity < 5) {
+            Log::warning('Product stock is low', [
+                'product_id' => $product->id,
+                'quantity' => $request->quantity,
+            ]);
+        }
+        
         return redirect()->route('products.index')
             ->with('success', 'Product updated successfully!');
     }
